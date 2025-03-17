@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# AWS Community Day Bengaluru - Blogathon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Disclaimer
 
-## Available Scripts
+**This is not a step-by-step guide, just my trade-off analysis on using Amazon Cognito to provide social login for your app and some pitfalls I found in my experience.**
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+In this article, I'll show you my serverless solution to add social identity providers as a login option for web and mobile applications, based on managed services and native integrations, and how I mitigated some issues I encountered.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Blog Link
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**[Read the full blog here](#)**
 
-### `npm test`
+## Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project demonstrates how to integrate **Amazon Cognito** with social identity providers like **Google, Facebook, and Apple** for authentication in your web and mobile applications.
 
-### `npm run build`
+### Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Amazon Cognito Integration**
+  - Social login support (Google, Facebook, Apple, etc.)
+  - Secure user authentication
+  - Session management
+  - User attribute customization
+- **Serverless Architecture**
+  - No backend management required
+  - Fully managed AWS services
+- **React.js & MobX for Frontend**
+  - Modern UI framework
+  - State management with MobX
+  - Responsive and scalable design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone this repository
+```sh
+ git clone https://github.com/your-repo/aws-cognito-auth
+ cd aws-cognito-auth
+```
 
-### `npm run eject`
+### 2. Configure AWS Cognito
+- Go to AWS Console → Cognito → User Pools.
+- Create a **User Pool** with social identity provider integration.
+- Copy **User Pool ID** and **App Client ID** into `.env` file.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Install dependencies
+```sh
+ yarn install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Run the application
+```sh
+ yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Screenshot](https://user-images.githubusercontent.com/2158187/29740369-866d9832-8a87-11e7-9f1e-e4cd77a54df4.png)
 
-## Learn More
+![Screenshot](https://user-images.githubusercontent.com/2158187/29740368-865b95ba-8a87-11e7-8563-dfeaa4b10e75.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Conclusion
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Using **Amazon Cognito** simplifies authentication while enabling seamless social login integration. However, understanding the trade-offs, such as potential customization limitations, helps optimize implementation for real-world applications.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For a detailed analysis, **[read the full blog here](#)** 🚀
