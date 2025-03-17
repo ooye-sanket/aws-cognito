@@ -7,25 +7,23 @@ import { FormGroup, FormControl, Button } from "react-bootstrap";
 @inject("authStore")
 @withRouter
 @observer
-export default class Login extends React.Component {
-  componentWillUnmount() {
-    this.props.authStore.reset();
-  }
-
+export default class Register extends React.Component {
   handleEmailChange = e => this.props.authStore.setEmail(e.target.value);
   handlePasswordChange = e => this.props.authStore.setPassword(e.target.value);
   handleSubmitForm = e => {
     e.preventDefault();
-    this.props.authStore.login().then(() => this.props.history.replace("/"));
+    this.props.authStore
+      .register()
+      .then(() => this.props.history.replace("/register/confirm"));
   };
 
   render() {
-    const { values, inProgress } = this.props.authStore;
+    const { inProgress } = this.props.authStore;
 
     return (
-      <BasicPage title="Login">
+      <BasicPage title="Sign up">
         <p>
-          <Link to="register">Need an account?</Link>
+          <Link to="login">Have an account?</Link>
         </p>
 
         <form onSubmit={this.handleSubmitForm}>
@@ -33,7 +31,6 @@ export default class Login extends React.Component {
             <FormControl
               type="email"
               placeholder="Email"
-              value={values.email}
               onChange={this.handleEmailChange}
             />
           </FormGroup>
@@ -52,7 +49,7 @@ export default class Login extends React.Component {
             type="submit"
             disabled={inProgress}
           >
-            Login
+            Sign up
           </Button>
         </form>
       </BasicPage>
